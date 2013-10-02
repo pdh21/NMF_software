@@ -68,13 +68,13 @@
 pro example_script
 ;----------------load up spectrum--------------------------
 ;read in example spectrum (in this case IRAS_10378+1108)
-readcol, './NMF_software/IRAS_10378+1108.dat',lambda,flux,sigma,format='F'
+readcol, './IRAS_10378+1108.dat',lambda,flux,sigma,format='F'
 ;move spectrum to restframe
 z=0.13622
 lambda=lambda/(1.0+z)
 
 ;----------------load up components-----------------------
-restore,'./NMF_software/NMF_components.sav'
+restore,'./NMF_components.sav'
 
 
 ;-----------------fit components-------------------------
@@ -85,7 +85,7 @@ NMF7_fit,lambda,flux,sigma,wavelength,H,weights, CHI_nu=chi_nu
 ;----------------Spectrum and fit plot------------------
 ;create NMF fit plot (as in Figure C1 in Hurley et al. 2013)
 set_plot, 'ps'
-device, filename='./NMF_software/example_IRAS_10378+1108fit.ps',/col
+device, filename='./example_IRAS_10378+1108fit.ps',/col
 !p.font=1
 !p.thick=4
 !x.thick=4

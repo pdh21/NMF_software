@@ -75,8 +75,12 @@ return
 end
 
 pro GMM_NMF_classifier, lambda, flux, sigma,prob_clust
-restore, './NMF_software/NMF_components.sav'
-restore, './NMF_software/GMMclusters.sav'
+;=----MAKE SURE THE FOLLOWING PATHS ARE CORRECT---------
+restore, './NMF_components.sav'
+restore, './GMMclusters.sav'
+;------------------------------------------------------
+
+
 ;GMM classifier works by comparing objects with spectra normalised over the 5-15micron range
 av_ind=where(lambda gt 5 and lambda lt 15)
 flux=flux/avg(flux[av_ind])
