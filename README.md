@@ -6,9 +6,13 @@ Software for fitting and classifying IRS galaxy spectra with the NMF components 
 An example idl script (example_script.pro) is provided to demonstrate the fitting and classifying procedures.
 
 To run the code:
+
 1) Download into a suitable directory within your IDL path
+
 2) Download the bvls.pro script from http://www-astro.physics.ox.ac.uk/~mxc/idl/bvls.pro
+
 3) Start idl within the NMF_software directory and run example_script.pro
+
 4) IDL should output a postscript plot (example_IRAS_10378+1108fit.ps) of the NMF fit and give 
 the probability of being in the Sy1, Sbrst, Sy2, Sy1.5 or Dusty cluster
 
